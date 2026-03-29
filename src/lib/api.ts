@@ -1,7 +1,8 @@
 import type { Product, Order, User, RegisterUseerDto } from "./types"
 import { toast } from "sonner";
-const URL_API = 'http://localhost:3001/api/v1'
+// const URL_API = 'http://localhost:3001/api/v1'
 // const URL_API = "http://172.168.2.88:3001/api/v1";
+const URL_API = 'https://tienda.itsfdavid.com/api/v1'
 
 // Función para obtener productos con paginación basada en offset
 export async function fetchProducts(offset = 0, limit = 12): Promise<Product[]> {
