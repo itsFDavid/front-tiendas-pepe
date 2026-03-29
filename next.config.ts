@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['localhost', 'tiendas-pepe.itsfdavid.com'], // Asegúrate de que esté aquí
+    domains: ['localhost', 'tiendas-pepe.itsfdavid.com', 'tienda.itsfdavid.com'], // Asegúrate de que esté aquí
   },
 };
 
