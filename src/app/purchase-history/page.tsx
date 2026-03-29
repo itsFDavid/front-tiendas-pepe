@@ -21,7 +21,7 @@ import { formatCurrency } from "@/lib/utils";
 
 export default function PurchaseHistoryPage() {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true); // 👈 estado de carga
+  const [loading, setLoading] = useState(true); // estado de carga
 
   const auth = useAuth();
 
@@ -105,8 +105,8 @@ export default function PurchaseHistoryPage() {
                     {formatCurrency(
                       order.detalles_.reduce(
                         (total, totalOrders) => total + totalOrders.total,
-                        0
-                      ) * 1.16
+                        0,
+                      ) * 1.16,
                     )}
                   </TableCell>
 

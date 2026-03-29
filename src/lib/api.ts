@@ -99,7 +99,7 @@ export async function DownloadPDFFactura(idOrden: number): Promise<void> {
     window.URL.revokeObjectURL(url);
     toast.success("La descarga de la factura ha comenzado");
   } catch (error) {
-    console.error("Error al descargar la factura:", error);
+    // console.error("Error al descargar la factura:", error);
     toast.error("Error al descargar la factura");
     throw error;
   }
@@ -213,8 +213,8 @@ function handleHttpError(
 
 
 export async function updateProduct(id: string, updatedData: Partial<Product>): Promise<Product | undefined> {
-  console.log("Updating product with ID:", id);
-  console.log("Updated data:", updatedData);
+  // console.log("Updating product with ID:", id);
+  // console.log("Updated data:", updatedData);
   const response =  await safeFetch<Product>(
     `${URL_API}/productos/${id}`,
     {

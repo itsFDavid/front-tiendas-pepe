@@ -16,7 +16,8 @@ export interface CartItem extends Product {
 }
 
 // const URL_API = "http://172.168.2.88:3001/api/v1";
-const URL_API = 'http://localhost:3001/api/v1';
+// const URL_API = 'http://localhost:3001/api/v1';
+const URL_API = "https://tienda.itsfdavid.com/api/v1";
 
 interface CartContextType {
   cart: CartItem[];
@@ -54,14 +55,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const addToCart = (product: Product) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find(
-        (item) => item.id_producto === product.id_producto
+        (item) => item.id_producto === product.id_producto,
       );
 
       if (existingItem) {
         return prevCart.map((item) =>
           item.id_producto === product.id_producto
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       } else {
         return [
@@ -82,14 +83,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const updateQuantity = (productId: string, quantity: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id_producto === productId ? { ...item, quantity } : item
-      )
+        item.id_producto === productId ? { ...item, quantity } : item,
+      ),
     );
   };
 
   const removeFromCart = (productId: string) => {
     setCart((prevCart) =>
-      prevCart.filter((item) => item.id_producto !== productId)
+      prevCart.filter((item) => item.id_producto !== productId),
     );
   };
 
