@@ -2,6 +2,7 @@
   "name": "tiendas-don-pepe",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@12.10.1",
   "engines": { "node": ">=24.22.1" },
   "scripts": {
     "dev": "next dev --turbopack",
