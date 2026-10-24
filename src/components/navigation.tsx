@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { useCart } from "@/context/cart-context";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -55,10 +56,10 @@ export default function Navigation() {
     return (
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between mx-auto px-4">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-            <img src="/logo.svg" alt="Logo" className="h-6 w-6" />
-            <span>Tiendas Don Pepe</span>
-          </Link>
+            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+              <Image src="/logo.svg" alt="Logo" width={24} height={24} />
+              <span>Tiendas Don Pepe</span>
+            </Link>
         </div>
       </header>
     );
@@ -135,7 +136,7 @@ export default function Navigation() {
             }
             className="flex items-center gap-2 font-bold text-xl"
           >
-            <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
+            <Image src="/logo.svg" alt="Logo" width={32} height={32} />
             <span className="hidden sm:inline">Tiendas Don Pepe</span>
           </Link>
         </div>
